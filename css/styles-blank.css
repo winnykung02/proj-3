@@ -89,20 +89,31 @@ h3 {
         color: #ec20c6;
         text-decoration: none;
     }
+
+    /* .top-left {
+        margin: 0;
+        padding: 0;
+        height: 100px;
+        position: relative;
+        overflow: visible;
+        border-left: 100vw;
+      } */
+
     .btn {
         background: #000000;
         color: #ffc25f;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         display: inline-block;
-        padding: 8px;
+        padding: 12px;
         letter-spacing: 0.05em;
         line-height: 1;
         border-radius: 5px;
         position: absolute;
-        margin-top: -10vh;
-        margin-left: 2vw;
+        margin-top: -9vh;
+        margin-left: 3vw;
+        transition: left .5s;
         -webkit-animation: fadeIn 3s;
         -moz-animation: fadeIn 3s;
         -o-animation: fadeIn 3s;
@@ -134,15 +145,63 @@ h3 {
         100% { opacity: 1; }
       }
 
+      .top-left:hover .btn {
+        left: 0;
+        opacity: 1;
+      }
+
+      .btt-btn {
+        background: #000000;
+        color: #ffc25f;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        display: inline-block;
+        padding: 12px;
+        letter-spacing: 0.05em;
+        line-height: 1;
+        border-radius: 5px;
+        position: sticky;
+        margin-bottom: 1vh;
+        margin-left: 86vw;
+        -webkit-animation: fadeIn 10s;
+        -moz-animation: fadeIn 10s;
+        -o-animation: fadeIn 10s;
+        -ms-animation: fadeIn 10s;
+      }
+      
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-moz-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-webkit-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-o-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      
+      @-ms-keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+    
 
 .content-wrapper {
     margin: 0 auto;
     padding: 30px;
     max-width: 900px;
 }
-h1 {
- 
-}
+
 
 /* HOME */
 .home {
@@ -224,7 +283,7 @@ canvas {
 .secret-list {
 
     text-align: center;
-    line-height: 100px;
+    line-height: 15rem;
     animation: fadeIn 5s;
     @keyframes fadeIn {
         -webkit-animation: fadeIn 5s;

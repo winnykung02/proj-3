@@ -60,7 +60,7 @@ function distanceFromCenter(boxPosition, mousePosition, boxSize) {
 //click on background changes background color, looped between pink & dark gray//
 
 var box = document.querySelector("body"),
-    colors = ["pink", "rgb(30, 30, 35)"];
+    colors = ["#e5c055", "rgb(30, 30, 35)"];
 
 box.onclick = function () {
     color = colors.shift();
