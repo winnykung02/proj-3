@@ -23,12 +23,39 @@
   </script>
 
   <!-- Link to your Javascript file as a type="module" -->
-  <script type="module" src="js/secrets.js"></script>
+
 </head>
 
-<body class="body">
+<body class="body" id ="body">
+    <!-- <script>
+      function addEvent(){
+         document.body.addEventListener("click", play)
+       }
+      function play() {
+        var sound = document.getElementById("sound");
+        sound.play();
+      }
+    </script> -->
   <div class="top-left">
-  <a class="btn" href="index.html">Homepage</a></div>
+    <a class="btn" href="index.html">Homepage</a>
+    <!-- <script>
+
+    jQuery (function($){
+      let song = document.querySelector("#song");
+      document.querySelector("#play-btn")
+      function button_action(){
+          if (song.paused){
+              song.play();
+              playBtn.innerHTML = "♫";
+          } else {
+              song.pause();
+              playBtn.innerHTML = "🔇"
+          }
+      };
+      });
+    </script>   -->
+    <button id="play-btn">♫</button>
+  </div>
   <!-- //  INTRO  // -->
   <header>
     <div class="content-wrapper">
@@ -36,13 +63,16 @@
         <h1>Secrets</h1>
         <br>
         This net art project expands on the concept of buried secrets that have become so easily acessible online.
-        Everyone
-        who uses the internet leaves behind a digital footprint, whether or not that information about them is true. I
-        used
-        an artistic approach to incorperate 3js in a way that shows the feeling of digging deep into the endless
-        secrects and half-truths that dot the cyberspace. The project follows more of an old abandoned look in an
-        abandoned archive, combined with the endless stars in space that collectively make up constellations and
-        galaxies. In today's world, information and misinformation are so easily spread because of the internet's obsession over transparency, truth, and privacy. And what's my secret? 
+        Everyone on the internet leaves behind a digital footprint, whether or not that information about them is true.
+        I used an artistic approach to incorperate 3js in a way that shows the feeling of digging deep into the endless
+        secrects and half-truths that dot the cyberspace. The project imitates an old, abandoned look in an
+        overcrowded archive. Like moths to a light, humans are often attracted to obtaining forbidden knowledge. Using
+        3js, I enhanced the scene by adding boundless stars in space that collectively make up constellations and
+        galaxies, sort of like how there are so many bits of information that collectively make up the internet. In
+        today's world, information and misinformation are so easily spread because of the internet's
+        obsession over transparency, truth, and privacy. And what about you? Fill out <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdjUpRSVvf6ABt-sYGJ0VEZai35UCxai2eIRGVhd9hpkTNKgA/viewform?usp=sf_link">this
+          form</a> to find out how much you are willing to share.
   </header>
 
   <main class="content-wrapper">
@@ -73,7 +103,8 @@
       <p>took me four months to recover from getting ghosted a year ago :))</p>
       <p>i like to smell my own farts</p>
       <p>my parents are divorced</p>
-      <p class="squish">I have scoliosis and wear a back brace, some dude made fun of me for being flat chested and I told him it's
+      <p class="squish">I have scoliosis and wear a back brace, some dude made fun of me for being flat chested and I
+        told him it's
         because I wear armor. I knocked on my back brace and he was petrified. He thought I was "so badass" and when his
         friend asked why I wore it I said it was because I almost got kidnapped as a kid and my parents wanted to
         protect me (btw I actually was almost kidnapped as a kid) Also the friend was a nice guy. None of them know the
@@ -83,7 +114,8 @@
       <p>i have a secret twin</p>
       <p>my best friend is a rat</p>
       <p>my mom is taylor swift</p>
-      <p class="squish">My whole class once got detention because I drew a penis with a glue stick on the whiteboard and when the
+      <p class="squish">My whole class once got detention because I drew a penis with a glue stick on the whiteboard and
+        when the
         teacher went to wipe off the board all the fluff came off and stuck to the glue. I never got in trouble for it
         because my whole class found it too funny to tell the teacher it was me.</p>
       <p>i use nail polish as lipstick</p>
@@ -99,7 +131,23 @@
   <div>
     <br><br>
   </div>
-  <!-- //  FOOTER INFO, SOCIAL MEDIA  // -->
-</body>
 
+  <audio id="song" src="media/ES_The French Library - Franz Gordon.mp3"></audio>
+  <audio id="sound" src="media/hotel-bell-ding-1-174457.mp3"></audio>
+  <script type="module" src="js/secrets.js"></script>
+  Sound Effect by floraphonic from Pixabay
+  <script src="js/sound.js"></script>
+</body>
+<!-- <script>
+document.onclick = function (e){
+  let x = e.pageX;
+  ley y = e.pageY;
+
+  let span = document.createElement("span");
+  span.classList.add("click_effect");
+  span.style.top = y + "px";
+  span.style.left = x + "px";
+  document.body.appendChild(span);
+}
+</script> -->
 </html>

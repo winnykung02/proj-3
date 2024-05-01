@@ -28,25 +28,25 @@ document.addEventListener("mousemove", (e) => {
     }
 })
 
-function setButtonPosition(left,top) {
+function setButtonPosition(left, top) {
     const windowBox = document.body.getBoundingClientRect()
     const buttonBox = runawayBtn.getBoundingClientRect()
-//wraps so that the button cannot move off screen//
-    if(distanceFromCenter(left, windowBox.left, buttonBox.width) < 0) {
+    //wraps so that the button cannot move off screen//
+    if (distanceFromCenter(left, windowBox.left, buttonBox.width) < 0) {
         left = windowBox.right - buttonBox.width - OFFSET
     }
-    if(distanceFromCenter(left, windowBox.right, buttonBox.width) > 0) {
+    if (distanceFromCenter(left, windowBox.right, buttonBox.width) > 0) {
         left = windowBox.left + OFFSET
     }
-    if(distanceFromCenter(top, windowBox.top, buttonBox.height) < 0) {
+    if (distanceFromCenter(top, windowBox.top, buttonBox.height) < 0) {
         left = windowBox.bottom - buttonBox.height - OFFSET
     }
-    if(distanceFromCenter(top, windowBox.bottom, buttonBox.height) > 0) {
+    if (distanceFromCenter(top, windowBox.bottom, buttonBox.height) > 0) {
         left = windowBox.top + OFFSET
     }
 
 
-    console.log(left,top)
+    console.log(left, top)
     runawayBtn.style.left = '${left}px'; //why is the entire string orange when ${} should be an expression//
     runawayBtn.style.top = "${top}px"; //should be moving away here but it isn't??//
 }
