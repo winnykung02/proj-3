@@ -1,24 +1,13 @@
 let sounds = [new Audio('media/ding-triangle-hit-smartsound-fx-1-00-03.mp3'), new Audio('media/ding-triangle-hit-smartsound-fx-1-00-03 (mp3cut.net).mp3'), new Audio('media/hotel-bell-ding-1-174457.mp3')];
 let lastSound = 0;
+
+
+
 let song = document.querySelector("#song");
+let sound = document.querySelector("#sound");
 let playBtn = document.querySelector("#play-btn")
 
-document.onclick = function (e) {
-    let x = e.pageX;
-    let y = e.pageY;
-    // sound.play();
-    
 
-    let span = document.createElement("span");
-    span.classList.add("click_effect");
-    span.style.top = y + "px";
-    span.style.left = x + "px";
-    document.body.appendChild(span);
-
-    setTimeout(() => {
-        span.remove();
-    }, 600);
-}
 
 document.querySelector("#body").addEventListener("pointerdown", () => {
 sounds[lastSound].pause();
@@ -27,16 +16,14 @@ sounds[lastSound].pause();
     let random = Math.floor(Math.random() * sounds.length);
     sounds[random].play();
     lastSound = random;
-    // console.log(lastSound);
 });
 
 song.volume = 0.3;
 song.loop = true;
-sound.volume = 0.15;
-sound.loop = false;
 sounds.volume = 0.1;
+// sounds.volume = 0.1;
 
-playBtn.addEventListener("click", button_action);
+playBtn.addEventListener("mousedown", button_action);
 
 function button_action() {
     if (song.paused) {
@@ -48,14 +35,27 @@ function button_action() {
     }
 }
 
+document.onclick = function (e) {
+    let x = e.pageX;
+    let y = e.pageY;
+
+    let span = document.createElement("span");
+    span.classList.add("click_effect");
+    span.style.top = y + "px";
+    span.style.left = x + "px";
+    document.body.appendChild(span);
+
+    setTimeout(() => {
+        span.remove();
+    }, 500);
+}
 
 
+sound.addEventListener("click", click_sfx);
 
-// sound.addEventListener("click", click_sfx);
-
-// function click_sfx() {
-//     sound.play();
-// }
+function click_sfx() {
+    sound.play();
+}
 
 
 // let sound = document.querySelector("#sound");
